@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/diet.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+  
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans';
+      overflow-x: hidden;
+    }
+  </style>
+  <body>
+    <h1>CADASTRO DE USUARIOS</h1>
+    <a href="{% url 'home' %}">HOME</a>
+
+       
+
+    <form action="{% url 'usuarios' %}" method="post">
+      {% csrf_token %}
+        nome: <input type="text" name="nome"/>
+       idade:  <input type="text" name="idade"/>
+
+        <button>Enviar</button>
+    </form> 
+
+  </body>
+</html>
